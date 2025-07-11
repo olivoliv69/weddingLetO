@@ -4,14 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vous êtes beauuuux</title>
+
+  <!-- CSS pour lightGallery et justifiedGallery -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css" />
+
   <style>
     body {
       font-family: "Courier New", Courier, monospace;
-  background: url('images/fond.jpg') center/cover no-repeat fixed;
+      background: url('images/fond.jpg') center/cover no-repeat fixed;
       margin: 0;
       padding: 0;
       text-align: center;
+      color: white;
     }
 
     header {
@@ -19,7 +24,7 @@
       justify-content: flex-end;
       align-items: center;
       padding: 15px 20px;
-      background: #fff;
+      background: rgba(255, 255, 255, 0.8);
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
@@ -35,26 +40,18 @@
 
     h1 {
       margin: 20px;
+      text-shadow: 1px 1px 2px black;
     }
 
     #gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
+      max-width: 95%;
+      margin: auto;
       padding: 20px;
     }
 
-    #gallery a img {
-      width: 200px;
-      height: auto;
+    .justified-gallery img {
       border-radius: 5px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      transition: transform 0.2s ease;
-    }
-
-    #gallery a img:hover {
-      transform: scale(1.03);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
   </style>
 </head>
@@ -66,42 +63,55 @@
 
   <h1>Vous êtes trop beauuuux</h1>
 
-  <div id="gallery">
-    <!-- Exemple de photos -->
-<a href="images/mariage-laura-olivier-5.jpg"><img src="images/mariage-laura-olivier-5.jpg" alt="mariage-laura-olivier-5" /></a>
-<a href="images/mariage-laura-olivier-6.jpg"><img src="images/mariage-laura-olivier-6.jpg" alt="mariage-laura-olivier-6" /></a>
-<a href="images/mariage-laura-olivier-8.jpg"><img src="images/mariage-laura-olivier-8.jpg" alt="mariage-laura-olivier-8" /></a>
-<a href="images/mariage-laura-olivier-15.jpg"><img src="images/mariage-laura-olivier-15.jpg" alt="mariage-laura-olivier-15" /></a>
-<a href="images/mariage-laura-olivier-22.jpg"><img src="images/mariage-laura-olivier-22.jpg" alt="mariage-laura-olivier-22" /></a>
-<a href="images/mariage-laura-olivier-48.jpg"><img src="images/mariage-laura-olivier-48.jpg" alt="mariage-laura-olivier-48" /></a>
-<a href="images/mariage-laura-olivier-52.jpg"><img src="images/mariage-laura-olivier-52.jpg" alt="mariage-laura-olivier-52" /></a>
-<a href="images/mariage-laura-olivier-59.jpg"><img src="images/mariage-laura-olivier-59.jpg" alt="mariage-laura-olivier-59" /></a>
-<a href="images/mariage-laura-olivier-77.jpg"><img src="images/mariage-laura-olivier-77.jpg" alt="mariage-laura-olivier-77" /></a>
-<a href="images/mariage-laura-olivier-79.jpg"><img src="images/mariage-laura-olivier-79.jpg" alt="mariage-laura-olivier-79" /></a>
-<a href="images/mariage-laura-olivier-100.jpg"><img src="images/mariage-laura-olivier-100.jpg" alt="mariage-laura-olivier-100" /></a>
-<a href="images/mariage-laura-olivier-105.jpg"><img src="images/mariage-laura-olivier-105.jpg" alt="mariage-laura-olivier-105" /></a>
-<a href="images/mariage-laura-olivier-113.jpg"><img src="images/mariage-laura-olivier-113.jpg" alt="mariage-laura-olivier-113" /></a>
-<a href="images/mariage-laura-olivier-135.jpg"><img src="images/mariage-laura-olivier-135.jpg" alt="mariage-laura-olivier-135" /></a>
-<a href="images/mariage-laura-olivier-156.jpg"><img src="images/mariage-laura-olivier-156.jpg" alt="mariage-laura-olivier-156" /></a>
-<a href="images/mariage-laura-olivier-163.jpg"><img src="images/mariage-laura-olivier-163.jpg" alt="mariage-laura-olivier-163" /></a>
-<a href="images/mariage-laura-olivier-173.jpg"><img src="images/mariage-laura-olivier-173.jpg" alt="mariage-laura-olivier-173" /></a>
-<a href="images/mariage-laura-olivier-177.jpg"><img src="images/mariage-laura-olivier-177.jpg" alt="mariage-laura-olivier-177" /></a>
-<a href="images/mariage-laura-olivier-181.jpg"><img src="images/mariage-laura-olivier-181.jpg" alt="mariage-laura-olivier-181" /></a>
-<a href="images/mariage-laura-olivier-187.jpg"><img src="images/mariage-laura-olivier-187.jpg" alt="mariage-laura-olivier-187" /></a>
-<a href="images/mariage-laura-olivier-211.jpg"><img src="images/mariage-laura-olivier-211.jpg" alt="mariage-laura-olivier-211" /></a>
-<a href="images/mariage-laura-olivier-219.jpg"><img src="images/mariage-laura-olivier-219.jpg" alt="mariage-laura-olivier-219" /></a>
-<a href="images/mariage-laura-olivier-220.jpg"><img src="images/mariage-laura-olivier-220.jpg" alt="mariage-laura-olivier-220" /></a>
-<a href="images/mariage-laura-olivier-223.jpg"><img src="images/mariage-laura-olivier-223.jpg" alt="mariage-laura-olivier-223" /></a>
+  <div id="gallery" class="justified-gallery">
+    <!-- Tes images ici -->
+    <a href="images/mariage-laura-olivier-5.jpg"><img src="images/mariage-laura-olivier-5.jpg" alt="5" /></a>
+    <a href="images/mariage-laura-olivier-6.jpg"><img src="images/mariage-laura-olivier-6.jpg" alt="6" /></a>
+    <a href="images/mariage-laura-olivier-8.jpg"><img src="images/mariage-laura-olivier-8.jpg" alt="8" /></a>
+    <a href="images/mariage-laura-olivier-15.jpg"><img src="images/mariage-laura-olivier-15.jpg" alt="15" /></a>
+    <a href="images/mariage-laura-olivier-22.jpg"><img src="images/mariage-laura-olivier-22.jpg" alt="22" /></a>
+    <a href="images/mariage-laura-olivier-48.jpg"><img src="images/mariage-laura-olivier-48.jpg" alt="48" /></a>
+    <a href="images/mariage-laura-olivier-52.jpg"><img src="images/mariage-laura-olivier-52.jpg" alt="52" /></a>
+    <a href="images/mariage-laura-olivier-59.jpg"><img src="images/mariage-laura-olivier-59.jpg" alt="59" /></a>
+    <a href="images/mariage-laura-olivier-77.jpg"><img src="images/mariage-laura-olivier-77.jpg" alt="77" /></a>
+    <a href="images/mariage-laura-olivier-79.jpg"><img src="images/mariage-laura-olivier-79.jpg" alt="79" /></a>
+    <a href="images/mariage-laura-olivier-100.jpg"><img src="images/mariage-laura-olivier-100.jpg" alt="100" /></a>
+    <a href="images/mariage-laura-olivier-105.jpg"><img src="images/mariage-laura-olivier-105.jpg" alt="105" /></a>
+    <a href="images/mariage-laura-olivier-113.jpg"><img src="images/mariage-laura-olivier-113.jpg" alt="113" /></a>
+    <a href="images/mariage-laura-olivier-135.jpg"><img src="images/mariage-laura-olivier-135.jpg" alt="135" /></a>
+    <a href="images/mariage-laura-olivier-156.jpg"><img src="images/mariage-laura-olivier-156.jpg" alt="156" /></a>
+    <a href="images/mariage-laura-olivier-163.jpg"><img src="images/mariage-laura-olivier-163.jpg" alt="163" /></a>
+    <a href="images/mariage-laura-olivier-173.jpg"><img src="images/mariage-laura-olivier-173.jpg" alt="173" /></a>
+    <a href="images/mariage-laura-olivier-177.jpg"><img src="images/mariage-laura-olivier-177.jpg" alt="177" /></a>
+    <a href="images/mariage-laura-olivier-181.jpg"><img src="images/mariage-laura-olivier-181.jpg" alt="181" /></a>
+    <a href="images/mariage-laura-olivier-187.jpg"><img src="images/mariage-laura-olivier-187.jpg" alt="187" /></a>
+    <a href="images/mariage-laura-olivier-211.jpg"><img src="images/mariage-laura-olivier-211.jpg" alt="211" /></a>
+    <a href="images/mariage-laura-olivier-219.jpg"><img src="images/mariage-laura-olivier-219.jpg" alt="219" /></a>
+    <a href="images/mariage-laura-olivier-220.jpg"><img src="images/mariage-laura-olivier-220.jpg" alt="220" /></a>
+    <a href="images/mariage-laura-olivier-223.jpg"><img src="images/mariage-laura-olivier-223.jpg" alt="223" /></a>
+  </div>
 
-
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+
   <script>
-    lightGallery(document.getElementById('gallery'), {
-      plugins: [],
-      licenseKey: '0000-0000-000-0000', // nécessaire pour la v2
-      speed: 500,
-      fullscreen: true,
-      zoom: true
+    const $gallery = $('#gallery');
+    $gallery.justifiedGallery({
+      rowHeight: 250,
+      margins: 5,
+      lastRow: 'nojustify',
+      captions: false
+    }).on('jg.complete', function () {
+      lightGallery(document.getElementById('gallery'), {
+        selector: 'a',
+        plugins: [],
+        licenseKey: '0000-0000-000-0000',
+        speed: 500,
+        fullscreen: true,
+        zoom: true
+      });
     });
   </script>
 
