@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galerie photos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
+  <style>
+    body {
+      font-family: "Courier New", Courier, monospace;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
 
+    header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 15px 20px;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .btn-retour {
+      background: black;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      font-family: sans-serif;
+    }
+
+    h1 {
+      margin: 20px;
+    }
+
+    #gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    #gallery a img {
+      width: 200px;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease;
+    }
+
+    #gallery a img:hover {
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="btn-retour">↩ Retour</a>
+  </header>
+
+  <h1>Galerie de mariage</h1>
+
+  <div id="gallery">
+    <!-- Exemple de photos -->
+    <a href="images/photo1.jpg">
+      <img src="images/photo1.jpg" alt="photo1" />
+    </a>
+    <a href="images/photo2.jpg">
+      <img src="images/photo2.jpg" alt="photo2" />
+    </a>
+    <a href="images/photo3.jpg">
+      <img src="images/photo3.jpg" alt="photo3" />
+    </a>
+    <!-- Ajoute ici autant de photos que tu veux -->
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+  <script>
+    lightGallery(document.getElementById('gallery'), {
+      plugins: [],
+      licenseKey: '0000-0000-000-0000', // nécessaire pour la v2
+      speed: 500,
+      fullscreen: true,
+      zoom: true
+    });
+  </script>
+
+</body>
+</html>
