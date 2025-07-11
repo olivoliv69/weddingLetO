@@ -11,13 +11,17 @@
       background: url('images/fond.jpg') center/cover no-repeat;
       height: 100vh;
       color: white;
-      font-family: sans-serif;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; /* ✅ Centre tous les éléments */
+      align-items: center;
       backdrop-filter: brightness(0.7);
       text-align: center;
+    }
+
+    /* Appliquer "Courier New" à tout sauf le bouton */
+    .courier {
+      font-family: "Courier New", Courier, monospace;
     }
 
     .photo-rond {
@@ -41,15 +45,18 @@
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
-      display: inline-block; /* ✅ largeur ajustée au texte */
+      display: inline-block;
+      font-family: sans-serif; /* le bouton reste en sans-serif */
     }
   </style>
 </head>
 <body>
-  <img src="images/couple.jpg" class="photo-rond" alt="Photo couple" />
-  <p>Wedding aux Sauvas : 27 au 29 juin 2025</p>
-  <h1>Merci!!</h1>
-  <p>Ce moment avec vous était incroyable,<br><strong>On vous aime!</strong></p>
+  <div class="courier">
+    <img src="images/couple.jpg" class="photo-rond" alt="Photo couple" />
+    <p>Wedding aux Sauvas : 27 au 29 juin 2025</p>
+    <h1>Merci!</h1>
+    <p>Ce moment avec vous était incroyable,<br><strong>On vous aime!</strong></p>
+  </div>
   <a href="photos.html" class="btn">📷 Accédez aux photos</a>
 </body>
 </html>
